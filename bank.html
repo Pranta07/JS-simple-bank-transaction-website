@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bank</title>
+        <!-- tailwind css -->
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h1 class="text-center text-4xl mt-8">
+                Let's get some
+                <span class="font-bold text-purple-500">Money!</span>
+            </h1>
+        </header>
+        <main>
+            <!-- Balance and transaction -->
+            <section class="mt-6 w-3/4 mx-auto">
+                <div class="grid grid-cols-3 gap-4 text-white">
+                    <div class="bg-blue-300 p-6 rounded-md">
+                        <h1 class="text-2xl">Deposit</h1>
+                        <h1 class="text-4xl">
+                            $<span id="deposit-total">00</span>
+                        </h1>
+                    </div>
+                    <div class="bg-green-300 p-6 rounded-md">
+                        <h1 class="text-2xl">Withdraw</h1>
+                        <h1 class="text-4xl">
+                            $<span id="withdraw-total">00</span>
+                        </h1>
+                    </div>
+                    <div class="bg-yellow-300 p-6 rounded-md">
+                        <h1 class="text-2xl">Balance</h1>
+                        <h1 class="text-4xl">
+                            $<span id="balance-total">1200</span>
+                        </h1>
+                    </div>
+                </div>
+            </section>
+            <!-- Withdraw and Deposit -->
+            <section class="w-3/4 mx-auto mt-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-300 p-4 rounded-md">
+                        <h1 class="text-2xl font-semibold pb-3">
+                            Please Deposit
+                        </h1>
+                        <input
+                            class="
+                                border border-blue-300
+                                focus:border-blue-700 focus:outline-none
+                                rounded
+                                p-1
+                                block
+                                w-3/4
+                                mb-3
+                            "
+                            type="text"
+                            name=""
+                            id="deposit-input"
+                            placeholder="$ amount you want to deposit"
+                        />
+                        <button
+                            id="deposit-btn"
+                            class="bg-blue-600 text-white px-3 py-2 rounded"
+                        >
+                            Deposit
+                        </button>
+                    </div>
+                    <div class="bg-green-300 p-4 rounded-md">
+                        <h1 class="text-2xl font-semibold pb-3">
+                            Withdraw amount
+                        </h1>
+                        <input
+                            class="
+                                border border-blue-300
+                                focus:border-blue-700 focus:outline-none
+                                rounded
+                                p-1
+                                block
+                                w-3/4
+                                mb-3
+                            "
+                            type="text"
+                            name=""
+                            id="withdraw-input"
+                            placeholder="$ amount you want to withdraw"
+                        />
+                        <button
+                            id="withdraw-btn"
+                            class="bg-blue-600 text-white px-3 py-2 rounded"
+                        >
+                            Withdraw
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="js/bank.js"></script>
+        <script></script>
+    </body>
+</html>

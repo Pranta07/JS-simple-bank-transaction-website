@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Unique Bank</title>
+        <!-- tailwind css -->
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h1 class="text-center text-4xl mt-8">
+                Welcome to
+                <span class="font-bold text-red-500">Unique Bank</span>
+            </h1>
+        </header>
+        <main>
+            <section
+                id="login-form"
+                class="bg-green-100 w-3/4 mx-auto mt-8 p-6 rounded-md"
+            >
+                <div>
+                    <h1 class="text-2xl font-semibold pb-3">Please Login</h1>
+                    <input
+                        class="
+                            border border-blue-300
+                            focus:border-blue-700 focus:outline-none
+                            rounded
+                            p-1
+                            block
+                            w-3/4
+                            mb-3
+                        "
+                        type="text"
+                        name=""
+                        id="user-email"
+                        placeholder="Enter your email"
+                    />
+                    <input
+                        class="
+                            border border-blue-300
+                            focus:border-blue-700 focus:outline-none
+                            rounded
+                            p-1
+                            block
+                            w-3/4
+                            mb-3
+                        "
+                        type="password"
+                        name=""
+                        id="user-pass"
+                        placeholder="Password"
+                    />
+                    <button
+                        id="submit-btn"
+                        class="bg-blue-600 text-white px-3 py-2 rounded"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <script src="js/login.js"></script>
+        <script>
+            /* // hide the form after click into button
+            document
+                .getElementById("submit-btn")
+                .addEventListener("click", function () {
+                    document.getElementById("login-form").style.display =
+                        "none";
+                }); */
+        </script>
+    </body>
+</html>
