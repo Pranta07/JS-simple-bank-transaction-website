@@ -26,14 +26,18 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
     const curDepositAmount = parseInt(depositTotal.innerText);
     const totalAmount = curDepositAmount + depositAmount;
     depositTotal.innerText = totalAmount; */
-    updateBalance("deposit-total", depositAmount);
+    if (depositAmount > 0) {
+        updateBalance("deposit-total", depositAmount);
+    }
 
     // updating balance amount
     /* const balanceTotal = document.getElementById("balance-total");
     const curBalance = parseInt(balanceTotal.innerText);
     const total = curBalance + depositAmount;
     balanceTotal.innerText = total; */
-    updateBalance("balance-total", depositAmount);
+    if (depositAmount > 0) {
+        updateBalance("balance-total", depositAmount);
+    }
 });
 
 // handling withdraw button
@@ -49,12 +53,18 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
     const curWithdrawAmount = parseInt(withdrawTotal.innerText);
     const totalAmount = curWithdrawAmount + withdrawAmount;
     withdrawTotal.innerText = totalAmount; */
-    updateBalance("withdraw-total", withdrawAmount);
+    const balanceTotal = document.getElementById("balance-total");
+    const curBalance = parseFloat(balanceTotal.innerText);
+    if (withdrawAmount > 0 && withdrawAmount <= curBalance) {
+        updateBalance("withdraw-total", withdrawAmount);
+    }
 
     // updating balance amount
     /* const balanceTotal = document.getElementById("balance-total");
     const curBalance = parseInt(balanceTotal.innerText);
     const total = curBalance - withdrawAmount;
     balanceTotal.innerText = total; */
-    updateBalance("balance-total", -withdrawAmount);
+    if (withdrawAmount > 0 && withdrawAmount <= curBalance) {
+        updateBalance("balance-total", -withdrawAmount);
+    }
 });
